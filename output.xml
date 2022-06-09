@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.4 on win32)" generated="20220607 12:04:37.176" rpa="false" schemaversion="3">
+<suite id="s1" name="Get Api Limit" source="D:\Advance_Robot_Python\Robot Framework_10_REST GET LIMIT\get_api_limit.robot">
+<test id="s1-t1" name="GET REQUEST LIMIT5" line="5">
+<kw name="GET" library="REST">
+<arg>https://jsonplaceholder.typicode.com/users?_limit=5</arg>
+<arg>timeout=30</arg>
+<arg>headers={"Authentication":""}</arg>
+<tag>http</tag>
+<doc>*Sends a GET request to the endpoint.*</doc>
+<status status="PASS" starttime="20220607 12:04:37.530" endtime="20220607 12:04:37.701"/>
+</kw>
+<kw name="Array" library="REST">
+<arg>response body</arg>
+<tag>assertions</tag>
+<doc>*Asserts the field as JSON array.*</doc>
+<status status="PASS" starttime="20220607 12:04:37.717" endtime="20220607 12:04:37.725"/>
+</kw>
+<kw name="Integer" library="REST">
+<arg>$[0].id</arg>
+<arg>1</arg>
+<tag>assertions</tag>
+<doc>*Asserts the field as JSON integer.*</doc>
+<status status="PASS" starttime="20220607 12:04:37.725" endtime="20220607 12:04:37.765"/>
+</kw>
+<kw name="String" library="REST">
+<arg>$[0]..city</arg>
+<arg>Gwenborough</arg>
+<tag>assertions</tag>
+<doc>*Asserts the field as JSON string.*</doc>
+<status status="PASS" starttime="20220607 12:04:37.766" endtime="20220607 12:04:37.793"/>
+</kw>
+<kw name="String" library="REST">
+<arg>$[0]..bs</arg>
+<arg>harness real-time e-markets</arg>
+<tag>assertions</tag>
+<doc>*Asserts the field as JSON string.*</doc>
+<status status="PASS" starttime="20220607 12:04:37.793" endtime="20220607 12:04:37.812"/>
+</kw>
+<kw name="String" library="REST">
+<arg>$[0]..lat</arg>
+<arg>-37.3159</arg>
+<tag>assertions</tag>
+<doc>*Asserts the field as JSON string.*</doc>
+<status status="PASS" starttime="20220607 12:04:37.813" endtime="20220607 12:04:37.833"/>
+</kw>
+<kw name="Integer" library="REST">
+<arg>$..id</arg>
+<arg>maximum=5</arg>
+<tag>assertions</tag>
+<doc>*Asserts the field as JSON integer.*</doc>
+<status status="PASS" starttime="20220607 12:04:37.834" endtime="20220607 12:04:37.865"/>
+</kw>
+<kw name="Output" library="REST">
+<arg>$..id</arg>
+<tag>I/O</tag>
+<doc>*Outputs JSON to terminal or a file.*</doc>
+<msg timestamp="20220607 12:04:37.890" level="INFO">
+[
+    1,
+    2,
+    3,
+    4,
+    5
+]</msg>
+<status status="PASS" starttime="20220607 12:04:37.866" endtime="20220607 12:04:37.899"/>
+</kw>
+<status status="PASS" starttime="20220607 12:04:37.524" endtime="20220607 12:04:37.900"/>
+</test>
+<status status="PASS" starttime="20220607 12:04:37.192" endtime="20220607 12:04:37.901"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Get Api Limit">Get Api Limit</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
